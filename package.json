@@ -1,14 +1,14 @@
 {
-  "name": "openblock-gui",
+  "name": "highq-gui",
   "version": "0.1.0",
-  "description": "GraphicaL User Interface for creating and running OpenBlock projects",
+  "description": "GraphicaL User Interface for creating and running highq projects",
   "main": "./dist/scratch-gui.js",
   "scripts": {
     "build": "npm run clean && webpack --colors --bail",
     "clean": "rimraf ./build && mkdirp build && rimraf ./dist && mkdirp dist",
     "deploy": "touch build/.nojekyll && gh-pages -t -d build -m \"Build for $(git log --pretty=format:%H -n1) [skip ci]\"",
     "prune": "./prune-gh-pages.sh",
-    "i18n:push": "tx-push-src openblock-editor interface translations/en.json",
+    "i18n:push": "tx-push-src highq-editor interface translations/en.json",
     "i18n:src": "rimraf ./translations/messages/src && babel src > tmp.js && rimraf tmp.js && build-i18n-src ./translations/messages/src ./translations/",
     "start": "webpack-dev-server --open --host 127.0.0.1",
     "test": "npm run test:lint && npm run test:unit && npm run build && npm run test:integration",
@@ -20,10 +20,10 @@
   },
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/openblockcc/openblock-gui#readme",
+  "homepage": "https://github.com/suku11421/highq-gui#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/openblockcc/openblock-gui.git"
+    "url": "git+ssh://git@github.com/suku11421/highq-gui.git"
   },
   "dependencies": {
     "@ramonak/react-progress-bar": "^3.1.0",
@@ -43,6 +43,9 @@
     "file-loader": "2.0.0",
     "get-float-time-domain-data": "0.1.0",
     "get-user-media-promise": "1.1.4",
+    "highq-blocks": "github:suku11421/highq-blocks#main",
+    "highq-l10n": "github:suku11421/highq-l10n#develop",
+    "highq-vm": "github:suku11421/highq-vm#main",
     "iconv-lite": "^0.6.2",
     "immutable": "3.8.2",
     "intl": "1.2.5",
@@ -56,10 +59,7 @@
     "minilog": "3.1.0",
     "monaco-editor": "^0.15.1",
     "omggif": "1.0.9",
-    "openblock-blocks": "0.1.0-prerelease.20221010033401",
-    "openblock-l10n": "^3.10.20221129143535",
     "openblock-save-svg-as-png": "^1.4.18",
-    "openblock-vm": "^0.2.0-prerelease.20221130100839",
     "papaparse": "5.3.0",
     "postcss-import": "^12.0.0",
     "postcss-loader": "^3.0.0",
