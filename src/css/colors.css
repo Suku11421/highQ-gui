@@ -4,7 +4,8 @@ $ui-tertiary: hsla(215, 50%, 90%, 1); /* #D9E3F2 */
 
 $ui-modal-overlay: hsla(215, 100%, 65%, 0.9); /* 90% transparent version of motion-primary */
 
-$ui-white: hsla(0, 100%, 100%, 1); /* #FFFFFF */
+/*$ui-white: hsla(0, 100%, 100%, 1); /* #FFFFFF */
+$ui-white: hsla(0, 100%, 100%, 1);
 $ui-white-dim: hsla(0, 100%, 100%, 0.75); /* 25% transparent version of ui-white */
 $ui-white-transparent: hsla(0, 100%, 100%, 0.25); /* 25% transparent version of ui-white */
 $ui-transparent: hsla(0, 100%, 100%, 0); /* 25% transparent version of ui-white */

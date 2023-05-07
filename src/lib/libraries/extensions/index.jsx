@@ -41,7 +41,130 @@ import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
 // import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 // import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import humanbodydetectionImage from './humanbodydetection/humanbodydetection.png';
+import objectDetectionImage from './objectdetection/objectdetection.png';
+import faceDetectionImage from './facedetection/facedetection.png';
+import speech2textImage from './speech2text/speech.png';
+import qnaimage from './qna/qna.png';
+import qnawikipediaimage from './qnawikipedia/qnawikipedia.png';
+
+import teachableMachineBlocksIconURL from './teachable-machine-blocks/teachable-machine-logo.png';
+import teachableMachineBlocksInsetIconURL from './teachable-machine-blocks/teachable-machine-blocks-small.svg';
+
 export default [
+    {
+        name: 'Face Detection',
+        extensionId: 'faceDetection',
+        collaborator: "triverse dynamics",
+        iconURL: faceDetectionImage,
+	description: (
+            <FormattedMessage
+                defaultMessage="Detect & recognize human face"
+                description="Detect & recognize human face"
+                id="gui.extension.faceDetection.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false,
+    
+            
+    },
+    {
+        name: 'Object Detection',
+        extensionId: 'objectDetection',
+        collaborator: "triverse dynamics",
+        iconURL: objectDetectionImage,
+	description: (
+            <FormattedMessage
+                defaultMessage="Object Detection"
+                description="Identify objects from image"
+                id="gui.extension.objectDetection.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+    
+            
+    },
+    {
+        name: 'Human Body Detection',
+        extensionId: 'posenet',
+        collaborator: "triverse dynamics",
+        iconURL: humanbodydetectionImage,
+	description: (
+            <FormattedMessage
+                defaultMessage="Human Body Detection"
+                description="Identify human parts from image"
+                id="gui.extension.posenet.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false,
+    
+            
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Speech to Text"
+                description="Name for the Text to Speech extension"
+                id="gui.extension.Scratch3Speech2TextBlocks.name"
+            />
+        ),
+        extensionId: 'Scratch3Speech2TextBlocks',
+        collaborator: 'triverse dynamics',
+        iconURL: speech2textImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Make your projects talk."
+                description="Description for the Text to speech extension"
+                id="gui.extension.Scratch3Speech2TextBlocks.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: false
+    },
+    {
+        name: 'Question Answering',
+        extensionId: 'Scratch3ML4KQnaBlocks',
+        collaborator: 'triverse dynamics',
+        iconURL: qnaimage,
+        description: (
+                <FormattedMessage
+                    defaultMessage="Question Answering"
+                    description="Finds the Answer to a question in some text"
+                    id="gui.extension.Scratch3ML4KQnaBlocks.description"
+                />
+            ),
+            featured: true,
+            disabled: false,
+            // bluetoothRequired: false,
+            internetConnectionRequired: false,
+    },
+    {
+        name: 'Wikipedia',
+        extensionId: 'Scratch3ML4KWikipediaBlocks',
+        collaborator: 'triverse dynamics',
+        iconURL: qnawikipediaimage,
+        description: (
+                <FormattedMessage
+                    defaultMessage="Wikipedia"
+                    description="Get the text from pages on Wikipedia."
+                    id="gui.extension.Scratch3ML4KWikipediaBlocks.description"
+                />
+            ),
+            featured: true,
+            disabled: false,
+            bluetoothRequired: false,
+            internetConnectionRequired: true,
+            helpLink: 'https://en.wikipedia.org/wiki/Main_Page'
+    },
     {
         name: (
             <FormattedMessage
@@ -163,6 +286,26 @@ export default [
                 defaultMessage="Make anything into a key."
                 description="Description for the 'Makey Makey' extension"
                 id="gui.extension.makeymakey.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Machine Learning"
+                description="Machine Learning name"
+                id="gui.extension.teachable-machine.name"
+            />
+        ),
+        extensionId: 'teachableMachine',
+        iconURL: teachableMachineBlocksIconURL,
+        insetIconURL: teachableMachineBlocksInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Use Google Teachable Machine models in your HaniBlock project."
+                description="Teachable Machine Description"
+                id="gui.extension.teachable-machine.description"
             />
         ),
         featured: true
